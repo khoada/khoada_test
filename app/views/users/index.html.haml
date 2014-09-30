@@ -1,12 +1,2 @@
-%table.table
-  %thead
-    %tr
-      - @users.first.attributes.each do |u|
-        %th
-          = link_to u[0], sort: u[0]
-  %tbody
-    - @users.each do |user|
-      %tr
-        - user.attributes.each do |u|
-          %td
-            = u[1]
+%div{id: "users"}
+  = render 'users'
