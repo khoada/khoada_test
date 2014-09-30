@@ -1,9 +1,9 @@
 %table.table
   %thead
     %tr
-      - @users.first.attributes.each do |u|
+      - User.column_names.each do |column|
         %th
-          = link_to u[0], sort: u[0], remote: true
+          = link_to column, sort: column, remote: true
   %tbody
     - @users.each do |user|
       %tr
